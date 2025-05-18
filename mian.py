@@ -18,6 +18,10 @@ app.add_middleware(
 @app.get("/")
 async def root():
     return {"message": "Server is running!"}
+
+@app.get("/health")
+async def api():
+    return {"message": "In good health!"}
     
 
 
