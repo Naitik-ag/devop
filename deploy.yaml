@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: pipeline
-        image: mahraurdarshil89/pipeline:latest
+        image: mahraurdarshil89/pipestream:latest
         ports:
         - containerPort: 8000
