@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pipeline
+  namespace: default
+  labels:
+    app: pipeline
+spec:
+  replucas: 3
+  selector:
+    matchLabels:
+      app: pipeline
+  template:
+    metadata:
+      labels:
+        app: pipeline
+    spec:
+      containers:
+      - name: pipeline
+        image: mahraurdarshil89/pipeline:latest
+        ports:
+        - containerPort: 8000
